@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:lazy_realtime_local/db/todos.dart';
+import 'package:lazy_realtime_local/models/todo.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:drift/native.dart';
