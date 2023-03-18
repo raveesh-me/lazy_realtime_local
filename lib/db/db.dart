@@ -6,7 +6,7 @@ import 'package:drift/native.dart';
 
 import 'package:drift/drift.dart';
 
-part 'filename.g.dart';
+part 'db.g.dart';
 
 
 @DriftDatabase(tables: [Todos])
