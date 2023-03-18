@@ -8,20 +8,8 @@ import 'package:drift/drift.dart';
 
 part 'filename.g.dart';
 
-// class Todos extends Table {
-//   IntColumn get id => integer().autoIncrement()();
-//   TextColumn get title => text()();
-//   TextColumn get content => text().nullable()();
-//   TextColumn get category => text().nullable()();
-// }
 
-@DataClassName("Catgory")
-class Categories extends Table {
-  IntColumn get id => integer().autoIncrement()();
-  TextColumn get name => text()();
-}
-
-@DriftDatabase(tables: [Todos, Categories])
+@DriftDatabase(tables: [Todos])
 class MyDatabase extends _$MyDatabase {
   MyDatabase() : super(_openConnection());
 
@@ -32,8 +20,8 @@ class MyDatabase extends _$MyDatabase {
 LazyDatabase _openConnection() {
   return LazyDatabase(() async {
     //TODO: CATCH Throws a [MissingPlatformDirectoryException] if the system is unable to provide the directory.
-    final dbFoler = await getApplicationDocumentsDirectory();
-    final File file = File(join(dbFoler.path, 'db.sqlite'));
+    final dbFolder = await getApplicationDocumentsDirectory();
+    final File file = File(join(dbFolder.path, 'db.sqlite'));
     return NativeDatabase.createInBackground(file);
   });
 }
