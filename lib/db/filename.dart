@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:lazy_realtime_local/db/todos.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:path/path.dart';
 import 'package:drift/native.dart';
@@ -7,12 +8,12 @@ import 'package:drift/drift.dart';
 
 part 'filename.g.dart';
 
-class Todos extends Table {
-  IntColumn get id => integer().autoIncrement()();
-  TextColumn get title => text()();
-  TextColumn get content => text().nullable()();
-  TextColumn get category => text().nullable()();
-}
+// class Todos extends Table {
+//   IntColumn get id => integer().autoIncrement()();
+//   TextColumn get title => text()();
+//   TextColumn get content => text().nullable()();
+//   TextColumn get category => text().nullable()();
+// }
 
 @DataClassName("Catgory")
 class Categories extends Table {
