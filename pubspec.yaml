@@ -57,11 +57,11 @@ dev_dependencies:
   # rules and activating additional ones.
   flutter_lints: ^2.0.0
   drift_dev: ^2.5.2
-  build_runner: ^2.3.3
   injectable_generator: ^2.1.4
   mobx_codegen: ^2.1.1
-  freezed: ^2.3.2
   json_serializable: ^6.6.1
+  freezed: ^2.3.2
+  build_runner: ^2.3.3
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
