@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lazy_realtime_local/di/injector.dart';
 
 void main() {
+  configureDependencies();
   runApp(const MyApp());
 }
 
@@ -9,9 +11,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomeScreen()
-    );
+    return const MaterialApp(home: HomeScreen());
   }
 }
 
